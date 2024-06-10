@@ -6,7 +6,7 @@ pool:
 
 variables:
 - name: SolutionName
-  value: "DemoSolution,SecondDemoSolution"
+  value: "ALMDemo,SecondALMDemo"
 
 parameters:
   - name: publishCustomization
@@ -54,7 +54,7 @@ steps:
       SolutionInputFile: '$(Build.ArtifactStagingDirectory)\\${{ solution }}.zip'
       SolutionTargetFolder: '$(build.sourcesdirectory)\PowerPlatform\Solutions\${{ solution }}'
       SolutionType: 'Both'
-      MapFile: '$(build.sourcesdirectory)\PowerPlatform\Solutions\Mappings\DemoSolution.xml'
+      MapFile: '$(build.sourcesdirectory)\PowerPlatform\Solutions\Mappings\ALMDemo.xml'
 - task: CmdLine@2
   displayName: Commit to Repo
   inputs:

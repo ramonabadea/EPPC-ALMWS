@@ -14,6 +14,7 @@ jobs:
     runs-on: windows-latest
 
     environment: Test
+
     steps:
       - uses: actions/checkout@v4
       
@@ -51,3 +52,12 @@ jobs:
  #         client-secret: ${{ secrets.CLIENTSECRET }}
  #         tenant-id: ${{ vars.TENANTID }}
  #         solution-name: 'ALMDemo'
+      - name: Import Data
+        uses: microsoft/powerplatform-actions/import-data@v1
+        with:
+          environment-url: ${{ vars.URL }}
+          app-id: ${{ vars.CLIENTID }}
+          client-secret: ${{ secrets.CLIENTSECRET }}
+          tenant-id: ${{ vars.TENANTID }}
+          data-file: '${{runner.temp}}/PowerPlatform/Data/ALMDemo.zip'
+

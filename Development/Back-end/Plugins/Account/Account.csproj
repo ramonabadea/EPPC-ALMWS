@@ -7,8 +7,8 @@
     <ProjectGuid>{EADEE1D4-3703-412B-8F31-433ED7376AAE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CRMK.Plugins.EntityLogicalName</RootNamespace>
-    <AssemblyName>CRMK.Plugins.EntityLogicalName</AssemblyName>
+    <RootNamespace>Bebe.Plugins.Account</RootNamespace>
+    <AssemblyName>Bebe.Plugins.Account</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

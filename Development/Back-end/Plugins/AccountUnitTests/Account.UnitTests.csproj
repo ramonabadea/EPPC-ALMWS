@@ -8,8 +8,8 @@
     <ProjectGuid>{929F59D3-59A6-40B9-AA72-FBAA6751C51B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CRMK.Plugins.EntityLogicalName.UnitTests</RootNamespace>
-    <AssemblyName>CRMK.Plugins.EntityLogicalName.UnitTests</AssemblyName>
+    <RootNamespace>Bebe.Plugins.Account.UnitTests</RootNamespace>
+    <AssemblyName>Bebe.Plugins.Account.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

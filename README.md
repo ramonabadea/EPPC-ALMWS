@@ -5,7 +5,7 @@ Repository for the Application Lifecycle Management (ALM) pre-Day workshop at Eu
 The following describes the labs you will be working on during (or after) the workshop.
 
 ### Prerequisites
-- Azure DevOps account or GitHub Account
+- Azure DevOps or GitHub Account
 - Two Dataverse environments (one for source and one for target)
 - App Registration
   - Follow this instruction: https://benediktbergmann.eu/2022/01/04/setup-a-service-principal-in-power-automate/
@@ -28,6 +28,9 @@ For GH you will need to create environment variables containing the connection i
 The pipelines are building on a certain folder structure which is explained in the following link:
 
 https://benediktbergmann.eu/2021/04/27/folder-structure-of-a-dataverse-project/
+
+#### Demo Code
+This repo does contain demo code for a Plugin as well as a TypeScript/JavaScript file. For both there are some UnitTests as well.
 
 ### Lab 1: Base Pipelines
 Create the following pipelines:
@@ -89,3 +92,18 @@ In this lab you should create a pipeline that checks the solution for issues usi
 Add a Solution Checker step to the Export Pipeline and use the exported unmanaged solution to check for issues.
 
 The complete pipelines can be found in the `Pipelines/Solution-Checker` folder.
+
+### Lab 5: Mapping
+Change both the Eport and Build pipeline to use a mapping file.
+
+Create a mapping file and add it to the unpack and pack steps.
+
+The complete pipelines can be found in the `Pipelines/Mapp` folder.
+
+### Lab 6: Move Data
+Change the Release pipeline to import data.
+
+Add a "import data" step at the end of the Relase pipeline.
+You could also add an export step in the build pipeline.
+
+The complete pipeline can be found in the `Pipelines/Data` folder

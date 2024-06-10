@@ -15,11 +15,11 @@ jobs:
       - name: Pack Solution
         uses: microsoft/powerplatform-actions/pack-solution@v1
         with:
-          solution-file: '${{runner.temp}}/packed/DemoSolution_Managed.zip'
-          solution-folder: 'PowerPlatform/Solutions/DemoSolution'
+          solution-file: '${{runner.temp}}/packed/ALMDemo_Managed.zip'
+          solution-folder: 'PowerPlatform/Solutions/ALMDemo'
           solution-type: 'Managed'
           overwrite-files: true
-          map-file: 'PowerPlatform/Solutions/Mappings/DemoSolution.xml'
+          map-file: 'PowerPlatform/Solutions/Mappings/ALMDemo.xml'
 
       - name: Publish Artifacts
         uses: actions/upload-artifact@v4

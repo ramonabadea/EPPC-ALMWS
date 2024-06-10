@@ -35,7 +35,7 @@ jobs:
           app-id: ${{ vars.CLIENTID }}
           client-secret: ${{ secrets.CLIENTSECRET }}
           tenant-id: ${{ vars.TENANTID }}
-          solution-file: '${{runner.temp}}/artifacts/DemoSolution_managed.zip'
+          solution-file: '${{runner.temp}}/artifacts/ALMDemo_managed.zip'
           activate-plugins: true
           run-asynchronously: true
           import-as-holding: true
@@ -47,4 +47,4 @@ jobs:
           app-id: ${{ vars.CLIENTID }}
           client-secret: ${{ secrets.CLIENTSECRET }}
           tenant-id: ${{ vars.TENANTID }}
-          solution-name: 'DemoSolution'
+          solution-name: 'ALMDemo'

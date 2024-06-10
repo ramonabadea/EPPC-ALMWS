@@ -21,7 +21,7 @@ jobs:
           app-id: ${{ vars.CLIENTID }}
           client-secret: ${{ secrets.CLIENTSECRET }}
           tenant-id: ${{ vars.TENANTID }}
-          solution-name: DemoSolution
+          solution-name: ALMDemo
         
       - name: Export Solution - Unmanaged
         uses: microsoft/powerplatform-actions/export-solution@v1
@@ -30,8 +30,8 @@ jobs:
           app-id: ${{ vars.CLIENTID }}
           client-secret: ${{ secrets.CLIENTSECRET }}
           tenant-id: ${{ vars.TENANTID }}
-          solution-name: DemoSolution
-          solution-output-file: "${{runner.temp}}/exported/DemoSolution.zip"
+          solution-name: ALMDemo
+          solution-output-file: "${{runner.temp}}/exported/ALMDemo.zip"
           managed: false
           run-asynchronously: true
           overwrite: true
@@ -43,8 +43,8 @@ jobs:
           app-id: ${{ vars.CLIENTID }}
           client-secret: ${{ secrets.CLIENTSECRET }}
           tenant-id: ${{ vars.TENANTID }}
-          solution-name: DemoSolution
-          solution-output-file: "${{runner.temp}}/exported/DemoSolution_managed.zip"
+          solution-name: ALMDemo
+          solution-output-file: "${{runner.temp}}/exported/ALMDemo_managed.zip"
           managed: false
           run-asynchronously: true
           overwrite: true
@@ -52,8 +52,8 @@ jobs:
       - name: Unpack Solution
         uses: microsoft/powerplatform-actions/unpack-solution@v1
         with:
-          solution-file: '${{runner.temp}}/exported/DemoSolution.zip'
-          solution-folder: 'PowerPlatform/Solutions/DemoSolution'
+          solution-file: '${{runner.temp}}/exported/ALMDemo.zip'
+          solution-folder: 'PowerPlatform/Solutions/ALMDemo'
           solution-type: 'Both'
           overwrite-files: true
 
@@ -61,7 +61,7 @@ jobs:
         run: |
           git config user.email "<>"
           git config user.name "${{github.triggering_actor}}"
-          git add 'PowerPlatform/Solutions/DemoSolution' --all
-          git commit -m "DemoSolution Changes"
+          git add 'PowerPlatform/Solutions/ALMDemo' --all
+          git commit -m "ALMDemo Changes"
           git pull origin main
           git push origin main

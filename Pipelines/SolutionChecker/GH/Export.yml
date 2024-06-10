@@ -8,7 +8,7 @@ on:
         description: Publish Customizations
 
 env:
-  SOLUTION_NAME: '["DemoSolution", "SecondDemoSolution"]'
+  SOLUTION_NAME: '["ALMDemo", "SecondALMDemo"]'
 
 jobs:
   variables:
@@ -87,7 +87,7 @@ jobs:
           solution-folder: 'PowerPlatform/Solutions/${{ matrix.solution }}'
           solution-type: 'Both'
           overwrite-files: true
-          #map-file: 'PowerPlatform/Solutions/Mappings/DemoSolution.xml'
+          #map-file: 'PowerPlatform/Solutions/Mappings/ALMDemo.xml'
           
       - name: Commit Changes to Repo
         run: |

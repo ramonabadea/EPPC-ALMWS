@@ -15,13 +15,24 @@ stages:
     pool: 
       vmImage: 'windows-latest'
     steps:
+    - checkout: self
+      clean: true
+      submodules: false
+      displayName: "Checkout repo"
+    - download: buildPipeline   # pipeline resource identifier.
+      artifact: drop
+    - task: CmdLine@2
+      inputs:
+        script: 'tree $(Pipeline.Workspace) /f'
     - task: PowerPlatformToolInstaller@2
       displayName: 'Power Platform Tool Installer'
     - task: PowerPlatformImportSolution@2
       inputs:
         authenticationType: 'PowerPlatformSPN'
         PowerPlatformSPN: 'Test'
-        SolutionInputFile: '$(Pipeline.Workspace)\buildPipeline\drop\<Solution Schemaname>_managed.zip'
+        SolutionInputFile: '$(Pipeline.Workspace)/buildPipeline/drop/ALMDemo_managed.zip'
+        UseDeploymentSettingsFile: true
+        DeploymentSettingsFile: '$(Agent.BuildDirectory)/s/PowerPlatform/Solutions/Settings/ALMDemo-Test.json'
         AsyncOperation: true
         MaxAsyncWaitTime: '60'
         HoldingSolution: true
@@ -32,3 +43,9 @@ stages:
         SolutionName: 'ALMDemo'
         AsyncOperation: true
         MaxAsyncWaitTime: '60'
+    - task: PowerPlatformImportData@2
+      inputs:
+        authenticationType: 'PowerPlatformSPN'
+        PowerPlatformSPN: 'Test'
+        Environment: '$(BuildTools.EnvironmentUrl)'
+        DataFile: '$(Agent.BuildDirectory)/s/PowerPlatform/Data/ALMDemo.zip'

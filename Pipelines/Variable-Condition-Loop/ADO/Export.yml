@@ -6,7 +6,7 @@ pool:
 
 variables:
 - name: SolutionName
-  value: "DemoSolution,SecondDemoSolution"
+  value: "ALMDemo,SecondALMDemo"
 
 parameters:
   - name: publishCustomization

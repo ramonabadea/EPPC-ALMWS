@@ -8,7 +8,7 @@ on:
         description: Publish Customizations
 
 env:
-  SOLUTION_NAME: '["DemoSolution", "SecondDemoSolution"]'
+  SOLUTION_NAME: '["ALMDemo", "SecondALMDemo"]'
 
 jobs:
   variables:

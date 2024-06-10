@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CRMK.Plugins.EntityLogicalName.UnitTests")]
+[assembly: AssemblyTitle("Bebe.Plugins.Account.UnitTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("$(BuildConfiguration)")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CRMK.Plugins.EntityLogicalName.UnitTests")]
+[assembly: AssemblyProduct("Bebe.Plugins.Account.UnitTests")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

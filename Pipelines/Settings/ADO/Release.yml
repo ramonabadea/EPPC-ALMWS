@@ -35,9 +35,9 @@ stages:
       inputs:
         authenticationType: 'PowerPlatformSPN'
         PowerPlatformSPN: 'Test'
-        SolutionInputFile: '$(Pipeline.Workspace)/buildPipeline/drop/DemoSolution_managed.zip'
+        SolutionInputFile: '$(Pipeline.Workspace)/buildPipeline/drop/ALMDemo_managed.zip'
         UseDeploymentSettingsFile: true
-        DeploymentSettingsFile: '$(Agent.BuildDirectory)/s/PowerPlatform/Solutions/Settings/DemoSolution-Test.json'
+        DeploymentSettingsFile: '$(Agent.BuildDirectory)/s/PowerPlatform/Solutions/Settings/ALMDemo-Test.json'
         AsyncOperation: true
         MaxAsyncWaitTime: '60'
         HoldingSolution: true
@@ -45,6 +45,6 @@ stages:
       inputs:
         authenticationType: 'PowerPlatformSPN'
         PowerPlatformSPN: 'Test'
-        SolutionName: 'DemoSolution'
+        SolutionName: 'ALMDemo'
         AsyncOperation: true
         MaxAsyncWaitTime: '60'
